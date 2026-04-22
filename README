@@ -1,0 +1,48 @@
+# 📊 Live Stock Dashboard
+
+A self-updating stock dashboard that pulls live data from Yahoo Finance. Built with Python + Flask, runs in your browser at `localhost:8080`.
+
+![Dashboard Preview](https://img.shields.io/badge/status-live-brightgreen) ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+
+## What It Does
+
+- **30 tickers** from my Yahoo Finance watchlist (US stocks, Canadian stocks, ETFs)
+- **Price charts** — 5D, 1M, 3M, 1Y, 2Y, 5Y with interactive tooltips
+- **Key statistics** — valuation multiples, profitability, financial health, per-share metrics
+- **Bull vs Bear analysis** — data-driven cases generated from actual financials
+- **Price targets** — Wall Street analyst consensus alongside Claude's quantitative estimate
+- **Latest news** — recent articles for each ticker
+- **Drag-and-drop** reordering of the watchlist
+- **Yahoo Finance sync** — one-click bookmarklet to pull your latest watchlist
+- **Auto-refreshes** every 5 minutes
+
+## Quick Start
+
+```bash
+pip install flask requests yfinance pandas
+python stock_dashboard.py
+```
+
+Your browser opens automatically to `http://localhost:8080`.
+
+**Or on Mac:** just double-click `Launch Dashboard.command`.
+
+## Tickers Included
+
+**Tech:** NVDA, META, NFLX, GOOG, MSFT, AMZN, AAPL
+**Financials:** BLK, KKR, BX, JPM, GS, OTF
+**Other:** XOM, RCL, L.TO, DOL.TO
+**ETFs:** VFV.TO, ZBAL.TO, ZEQT.TO, MGQE.TO, VDE, ITA, VDC, IVV, VTV, QQQ, DXJ, GLD, SLV
+
+Edit the list anytime via the ✎ Edit List button in the sidebar.
+
+## Syncing With Yahoo Finance
+
+1. Open the dashboard → click **✎ Edit List**
+2. Drag the purple **"📊 Sync to Dashboard"** bookmarklet to your Chrome bookmark bar
+3. Go to your Yahoo Finance watchlist → click the bookmarklet
+4. Dashboard updates instantly
+
+## Disclaimer
+
+This is a personal tool — not financial advice. Claude's price targets use a simplified P/E model and should not be used as the sole basis for investment decisions.
